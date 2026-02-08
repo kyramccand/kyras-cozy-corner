@@ -1,0 +1,199 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        input {
+            width: 100%;
+            height: 40px;
+            font-size: clamp(16px, 1vw, 22px);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px 10px;
+        }
+        input[type="radio"] {
+            height: 20px;
+            width: 20px;
+            vertical-align: middle; 
+        }
+        input[type="checkbox"] {
+            height: 20px;
+            width: 20px;
+            vertical-align: middle; 
+        }
+        select {
+            height: 40px;
+            font-size: clamp(16px, 1vw, 22px);
+            padding: 0 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color:#685c86;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            box-sizing: border-box;
+        }
+        label {
+            font-weight: 600;
+            color: #2f1c60;
+            margin-bottom: 8px;
+            display: block;
+        }
+        #multiselect-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-grow: 1;
+        }
+        #input-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        #option-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1vw;
+        }
+
+        #hours-table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 500px;
+            background-color: #ffffff;
+        }
+
+        #hours-table thead {
+            background-color: #685c86;
+            color: #ffffff;
+        }
+
+        #hours-table th {
+            padding: 15px;
+            text-align: left;
+        }
+
+        #hours-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ececec;
+        }
+        
+        @media (max-width: 1200px) {
+            #multiselect-container {
+                flex-direction: column;
+            }
+
+            #option-container {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Enroll</title>
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <img src='./images/thread-ball-icon (1).png' height="70" width="70"></p>
+            Kyra's Cozy Corner
+        </div>
+        
+        <nav id="links">
+            <a href="./homepage.html">HOME</a>
+            <a href="./about.html">ABOUT</a>
+            <a href="./gallery.html">GALLERY</a>
+            <a href="./contact.html">CONTACT US</a>
+            <a href="./enroll.html">ENROLL</a>
+        </nav>
+        <!-- Top Navigation Menu -->
+        <a href="javascript:void(0);" id="menu-icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <main>
+        <div id="centered-page-title">
+            <h1>Enroll Today</h1>
+            Ready to create something special together? Join our Stitching Generations
+            program and discover the joy of learning fiber arts alongside your grandchild.
+            Whether you're picking up needles for the first time or returning to a
+            beloved craft, we'll guide you every stitch of the way. Fill out the form
+            below to reserve your spot and start building memories that last a lifetime.
+        </div>
+        
+        
+        <form action='#' method='get'>
+            <!-- Learned about placeholders here: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/placeholder#:~:text=The%20placeholder%20attribute%20defines%20the,Accessibility%20concerns -->
+            <label>Grandparent Name</label> <input type="text" name='grandparent-name' id='the_name' placeholder="Enter a name..." required> 
+            <br /><br />
+            <label>Grandchild Name</label> <input type="text" name='grandchild-name' id='the_name' placeholder="Enter a name..." required>
+            <br /><br />
+            <label>Grandchild Age</label> <input type = "number" placeholder="Enter an age..." required>
+            <br /><br />
+            <label>Email</label><input type="email" placeholder="Enter your email..." required>
+            <br /><br />
+            <label>Phone</label><input type="tel" placeholder="Enter your phone number..." required>
+            <br /><br />
+            <label>Experience Level</label>
+            <div id="input-container">
+                <div id="multiselect-container">
+                    <div id="option-container"><input type="radio" name="exerience-level" value="beg" required>Beginner</div>
+                    <div id="option-container"><input type="radio" name="exerience-level" value="int" required>Intermediate</div>
+                    <div id="option-container"><input type="radio" name="exerience-level" value="adv" required>Advanced</div>
+                </div>
+            </div>
+            <br /><br />
+            <label>Craft preference</label>
+                <select name="craft">
+                <!-- Learned how to do this here: https://www.tutorialspoint.com/how-can-i-set-the-default-value-for-an-html-select-element -->
+                    <option value="select" selected disabled hidden>Choose an option...</option>
+                    <option value="crochet">Crochet</option>
+                    <option value="knitting">Knitting</option>
+                    <option value="both">Either/Both</option>
+                    <option value="not-sure">Not sure yet</option>
+                </select>
+            <br /><br />
+            <label>Preffered day of the week</label>
+            <div id="multiselect-container">
+                <div id="option-container"><input type="checkbox" name="days" value="monday">Monday</div>
+                <div id="option-container"><input type="checkbox" name="days" value="tuesday">Tuesday</div>
+                <div id="option-container"><input type="checkbox" name="days" value="wednesday">Wednesday</div>
+                <div id="option-container"><input type="checkbox" name="days" value="thursday">Thursday</div>
+                <div id="option-container"><input type="checkbox" name="days" value="friday">Friday</div>
+                <div id="option-container"><input type="checkbox" name="days" value="saturday">Saturday</div>
+                <div id="option-container"><input type="checkbox" name="days" value="sunday">Sunday</div>
+            </div>
+            <br /><br />	
+            <input type="submit" value="Submit Enrollment">
+        </form>
+    </main>
+    <footer>
+        <div id="socials-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 4l11.733 16H20L8.267 4zm0 16l6.768-6.768m2.46-2.46L20 4" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" />
+                    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0m7.5-4.5v.01" />
+                </g>
+            </svg>
+        </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+        <path fill="currentColor" d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m0 23a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25m1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.38 2.38 0 0 0-2.375 2.375v.638h-2.25v-.638A4.63 4.63 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246"/>
+        <path fill="none" d="M16 25a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25m1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.38 2.38 0 0 0-2.375 2.375v.638h-2.25v-.638A4.63 4.63 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246"/>
+    </svg>
+</footer>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("links");
+        x.classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>

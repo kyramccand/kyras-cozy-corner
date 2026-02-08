@@ -1,0 +1,187 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        #product-container {
+            display: grid;
+            grid-template-columns: 30% 30% 30%; /* Learned about grids here: https://www.w3schools.com/css/css_grid.asp*/
+            align-items: start;
+            justify-content: center;
+            gap: 3vw;
+            padding: 50px 100px;
+        }
+        #product {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #product-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 10px 10px 10px;
+        }
+        #product-img-container {
+            height: 25vw;
+            width: 25vw;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        #product-img-container img { /* Learned image cropping from here: https://www.reddit.com/r/css/comments/tl5jda/what_is_the_best_way_to_crop_an_image_with_css/*/
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+            #product-container {
+                display: flex;
+                flex-direction: column;
+            }
+            #product-img-container {
+                width: 90vw;
+                height: 30vh;
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <img src='./images/thread-ball-icon (1).png' height="70" width="70"></p>
+            Kyra's Cozy Corner
+        </div>
+        
+        <nav id="links">
+            <a href="./homepage.html">HOME</a>
+            <a href="./about.html">ABOUT</a>
+            <a href="./gallery.html">GALLERY</a>
+            <a href="./contact.html">CONTACT US</a>
+            <a href="./enroll.html">ENROLL</a>
+        </nav>
+        <!-- Top Navigation Menu -->
+        <a href="javascript:void(0);" id="menu-icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <main>
+        <div id="centered-page-title">
+            <h1>Our Products</h1>
+        </div>
+        <div id="product-container">
+            <div id="product">
+                <div id="product-img-container">
+                    <img src="./images/shirt.jpg">
+                </div>
+                <span id="product-info">
+                    <span>Crocheted Robe</span>
+                    <span>$45</span>
+                </span>
+            </div>
+            <div id="product">
+                <div id="product-img-container">
+                    <img src="./images/scrunchies.jpg">
+                </div>
+                <span id="product-info">
+                    <span>Assorted Scrunchies</span>
+                    <span>$8</span>
+                </span>
+            </div>
+            <div id="product">
+                <div id="product-img-container">
+                    <img src="./images/pillow.jpg">
+                </div>
+                <span id="product-info">
+                    <span>Tropical Pillow</span>
+                    <span>$15</span>
+                </span>
+            </div>
+            <div id="product">
+                <div id="product-img-container">
+                    <img src="./images/cactus.jpg">
+                </div>
+                <span id="product-info">
+                    <span>Cactus Decoration</span>
+                    <span>$12</span>
+                </span>
+            </div>
+            <div id="product">
+                <div id="product-img-container">
+                    <img src="./images/tablecloth.jpg">
+                </div>
+                <span id="product-info">
+                    <span>Granny Square Tablecloth</span>
+                    <span>$80</span>
+                </span>
+            </div>
+            <div id="product">
+                <div id="product-img-container">
+                    <img src="./images/coaster.jpg">
+                </div>
+                <span id="product-info">
+                    <span>Traditional Coaster</span>
+                    <span>$27</span>
+                </span>
+            </div>
+            <div id="product">
+                <div id="product-img-container">
+                    <img src="./images/elephant-mat.jpg">
+                </div>
+                <span id="product-info">
+                    <span>Elephant Mat</span>
+                    <span>$22</span>
+                </span>
+            </div>
+            <div id="product">
+                <div id="product-img-container">
+                    <img src="./images/hat.jpg">
+                </div>
+                <span id="product-info">
+                    <span>Mini Beanie</span>
+                    <span>$19</span>
+                </span>
+            </div>
+            <div id="product">
+                <div id="product-img-container">
+                    <img src="./images/baby-shoe.jpg">
+                </div>
+                <span id="product-info">
+                    <span>Baby Slippers</span>
+                    <span>$23</span>
+                </span>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div id="socials-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 4l11.733 16H20L8.267 4zm0 16l6.768-6.768m2.46-2.46L20 4" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" />
+                    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0m7.5-4.5v.01" />
+                </g>
+            </svg>
+        </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+        <path fill="currentColor" d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m0 23a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25m1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.38 2.38 0 0 0-2.375 2.375v.638h-2.25v-.638A4.63 4.63 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246"/>
+        <path fill="none" d="M16 25a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25m1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.38 2.38 0 0 0-2.375 2.375v.638h-2.25v-.638A4.63 4.63 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246"/>
+    </svg>
+</footer>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("links");
+        x.classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>
