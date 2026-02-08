@@ -253,4 +253,8 @@ nav#links a:not(:last-child)::after { /* Learned about this from here: https://w
     nav#links a:not(:last-child)::after {
         content: '' !important;
     }
+
+    #image-container {
+        height: 15vh;
+    }
 }
