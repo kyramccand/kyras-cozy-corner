@@ -207,7 +207,7 @@ a:hover {
 
 nav#links a:not(:last-child)::after {
     content: ' | ';
-    color: #2f1c60;
+    color:#685c86;
 }
 
 #menu-icon {
