@@ -89,6 +89,12 @@ svg {
 svg:hover {
     color:#2f1c60;
 }
+a {
+    color:#685c86;
+}
+a:hover {
+    color: #2f1c60;
+}
 #side-by-side-image-text {
     align-items: center;
     display: flex;
